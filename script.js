@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  emailjs.init('ta_clé_publique');
+  emailjs.init('VcL-kSYiWB1uwcYAK');
 
   const form = document.querySelector(".form-contact");
+
+  if (!form) return;
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -10,9 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         alert("Message envoyé avec succès !");
         form.reset();
-      }, (error) => {
+      })
+      .catch((error) => {
+        console.error("Erreur EmailJS :", error);
         alert("Une erreur est survenue, merci de réessayer.");
-        console.error('FAILED...', error);
       });
   });
 });
