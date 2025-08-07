@@ -129,9 +129,10 @@ footer {
   border-radius: 8px;
   font-weight: bold;
   color: white;
+  background-color: #4caf50; /* Vert succès par défaut */
   z-index: 1000;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none;
+  opacity: 1;
 }
 
 #notification.success {
