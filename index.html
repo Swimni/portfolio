@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nino GUINOT TOFFOLI</h1>
+    <nav>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="presentation">
+    <h2>À propos de moi</h2>
+	<img src="profil.jpg" alt="Photo de profil" class="photo-profil">
+    <p>Je suis développeur web freelance, disponible pour creation, modification, securisation et suivi de votre site web...</p>
+
+  <!-- a completer-->
+</section>
+
+</section>
+
+  <section id="projets">
+    <h2>Mes projets</h2>
+	 <div class="projets-container">
+    <div class="projet">
+	<h3>Projet 1 : Pole Emploi</h3>
+  <p>Creation d'un site web afin d'aider le retour a l'emploi</p>
+  <img src="polemploi.jpg" alt="Projet 1">
+</div>
+
+<div class="projet">
+  <h3>Projet 2 : Youtube</h3>
+  <p>Creation d'une plateforme afin de streamer / scroller / consommer du contenu</p>
+  <img src="yt.jpg" alt="Projet 2">
+</div>
+
+</div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="form-contact" action="send_mail.php" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - GUINOT TOFFOLI NINO</p>
+  </footer>
+  <!--<script src="script.js"></script> -->
+</body>
+</html>
