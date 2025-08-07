@@ -1,26 +1,19 @@
-/*document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+  emailjs.init('ta_clé_publique');
+
   const form = document.querySelector(".form-contact");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault(); // Empêche l'envoi réel
-*/
-    const inputs = form.querySelectorAll("input, textarea");
-    let valid = true;
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    inputs.forEach((field) => {
-      if (!field.value.trim()) {
-        field.style.borderColor = "red";
-        valid = false;
-      } else {
-        field.style.borderColor = "#ccc";
-      }
-    });
-
-    if (valid) {
-      alert("Message envoyé avec succès !");
-      form.reset();
-    } else {
-      alert("Merci de remplir tous les champs !");
-    }
+    emailjs.sendForm('service_d9i1eqc', 'template_axuw026', this)
+      .then(() => {
+        alert("Message envoyé avec succès !");
+        form.reset();
+      }, (error) => {
+        alert("Une erreur est survenue, merci de réessayer.");
+        console.error('FAILED...', error);
+      });
   });
 });
+
