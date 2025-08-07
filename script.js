@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     emailjs.sendForm('service_d9i1eqc', 'template_axuw026', this)
       .then(() => {
         alert("Message envoyé avec succès !");
-        form.reset();
+        this.reset();
       })
       .catch((error) => {
         console.error("Erreur EmailJS :", error);
